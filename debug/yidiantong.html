@@ -13,11 +13,11 @@
         <div class="container">
         <a href="./index.html" class="navbar-brand ">返回</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="">游客</span>
+            <span class="">Debug</span>
         </button>
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><div class="nav-link">当前为游客模式登录</div></li>
+                <li class="nav-item"><div class="nav-link">当前为Debug模式浏览，你可以调试。</div></li>
             </ul>
         </div>
     </div>
@@ -615,5 +615,10 @@
     <p>
         <br/>
     </p>
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+    // VConsole will be exported to `window.VConsole` by default.
+    var vConsole = new window.VConsole();
+    </script>
     <script async src="/js/src/sakura.js"></script>
     <script src="yh.js" defer></script>
