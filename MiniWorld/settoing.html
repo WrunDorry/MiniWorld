@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>启用/禁用JS文件</title>
+</head>
+<body>
+  <!-- 这里放置你的表单 -->
+  <form>
+      <label for="toggle-switch">启用/禁用 JavaScript</label>
+      <input type="checkbox" id="toggle-switch">
+  </form>
+
+  <!-- 控制选项 -->
+  <script>
+    const toggleSwitch = document.getElementById('toggle-switch');
+    const isEnabled = localStorage.getItem("isEnabled") === "true";
+    if (isEnabled) {
+      toggleSwitch.checked = true;
+    }
+    toggleSwitch.addEventListener('change', () => {
+      if (toggleSwitch.checked) {
+        localStorage.setItem("isEnabled", true);
+      } else {
+        localStorage.setItem("isEnabled", false);
+      }
+      window.parent.postMessage({
+        type: 'toggle-yh-js',
+        isEnabled: toggleSwitch.checked,
+      }, '*');
+    });
+  </script>
+</body>
+</html>
