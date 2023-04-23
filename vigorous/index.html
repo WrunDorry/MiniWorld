@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自助问答</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script> 
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/v4-shims.js"></script> 
+    <link rel="shortcut icon" href="./logo.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+		/* 设置公告栏的样式 */
+		#notice-wrapper {
+			background-color: #ffcccc; /* 背景色为浅红色 */
+			color: yellow; /* 文字颜色为黄色 */
+			padding: 10px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;  /* 避免动画范围超出公告区域 */
+		}
+
+		/* 设置公告文字的样式 */
+		#notice-text {
+			animation: scroll 20s linear infinite 2s; /* 添加动画延迟和滚动动画 */
+			white-space: nowrap; /* 禁止换行 */
+		}
+
+		/* 设置公告滚动动画的样式 */
+		@keyframes scroll {
+			from { transform: translateX(100%); }
+			to { transform: translateX(-100%); }
+		}
+
+		/* 响应式布局 */
+		@media only screen and (max-width: 600px) {
+			#notice-wrapper {
+				padding: 5px;
+			}
+			#notice-text {
+				font-size: 14px;
+			}
+		}
+
+	</style>
+</head>
+
+<body background="https://fb-cdn.fanbook.mobi/fanbook/app/files/chatroom/image/10d60ad4ccf3fe4afcc58ab2264d041e.jpg">
+    <div id="notice-wrapper">
+		<div id="notice-text">
+			⚠警告！【元気食堂】服务器非游戏官方服务器，人数不足2.3w人，也没有购买DevOpeb团队的【自助问答】版权，极为危险！请不要输入任何您的隐私信息，以免发生以外！
+		</div>
+	</div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark  text-dark">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand "><i class="fa-solid fa-circle-exclamation" style="color: #ff0000;"></i>自助问答-元気食堂</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class=""><i class="fa-solid fa-user-lock" style="color: #94bbff;"></i></span>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="nav-link"><i class="fa-solid fa-user-lock" style="color: #94bbff;"></i>当前为游客模式登录</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <!--gap-->
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="card-title">⚠版权提示</div>
+                            <div class="card-text">
+                                <p>
+                                    <span style="color: rgb(255, 0, 0);">服务器主<strong>没有购买【自助问答】的版权</strong>，并且不是官方服务器，人数低于2.3w人。此版本为试用版，请点击下方<strong>【缴费】</strong>按钮开通个人版。此版本将在5天后关闭！请勿在本页面输入并查看任何信息，以免发生以外！</span>
+                                </p>
+                            </div>
+                            <a href="https://51fak.com/liebiao/FFCF99628EC97BE3" class="btn btn-primary mt-2">缴费</a>
+                            <a href="https://fanbook.mobi/Vm3SRFeJ" class="btn btn-primary mt-2">加入官方服务器</a>
+                            <a href="https://51fak.com/details/19ABA4E3" class="btn btn-primary mt-2">给开发者递咖啡</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="card-title">示例标题</div>
+                            <div class="card-text">
+                                测试
+                            </div>
+                            <!--<a href="./buhuo.html" class="btn btn-primary mt-2">查看</a>-->
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="card-title">管理员招募</div>
+                            <div class="card-text">
+                                管理员招募解答
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                -->
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <p style="text-align: center;">
+        <span style="color: rgb(255, 255, 255);">©Copyright 2023 </span><a href="https://fanbook.mobi/Vm3SRFeJ"
+            target="_self" style="text-decoration: underline; color: rgb(0, 176, 80);"><span
+                style="color: rgb(0, 176, 80);">DevOpenClub</span></a><span style="color: rgb(255, 255, 255);">.All
+            Rights reserves.</span><br />
+    </p>
+<!--
+    <p style="text-align: center;">
+        <a href="./debug" data-ke-src="./debug"
+            style="font-family: &quot;sans serif&quot;, tahoma, verdana, helvetica; font-size: 12px; text-align: center; white-space: normal;"><span
+style="color: rgb(146, 208, 80); font-family: sans-serif; font-size: 16px;">以Debug模式登录</span></a>
+    </p>
+-->
+
+    
+
+    <script src="./yh.js" defer></script>
+    <script src="./mainfiles/jquery.min.js.下载" type="text/javascript"></script>
+    <script src="./mainfiles/bootstrap.bundle.min.js.下载" type="text/javascript"></script>
+    <script src="./mainfiles/wave.min.js.下载" type="text/javascript"></script>
+    <script src="./mainfiles/main.min.js.下载" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
