@@ -1,0 +1,54 @@
+#notice-wrapper {
+    background-color: #ffcccc;
+    color: yellow;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#notice-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    z-index: 2;
+    /* 设置图标的层级为2，让其显示在最上层 */
+}
+
+#notice-text-wrapper {
+    position: relative;
+    /* 将文本包装区域设为“relative”以定位 */
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    /* 左侧留出位置给公告图标 */
+    white-space: nowrap;
+    animation: scroll 30s linear infinite 2s;
+}
+
+/* 设置公告滚动动画的样式 */
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* 响应式布局 */
+@media only screen and (max-width: 600px) {
+    #notice-wrapper {
+        padding: 5px;
+    }
+
+    #notice-text {
+        font-size: 14px;
+    }
+}
